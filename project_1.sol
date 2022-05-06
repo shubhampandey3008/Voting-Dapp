@@ -31,6 +31,7 @@ contract Election {
     function addCandidate (string memory _name) private {
         uint id = candidate.length ;
         candidate.push( Candidate(id , _name , 0) );
+        candidatesCount++;
     }
 
     function vote (uint _candidateId) public {
